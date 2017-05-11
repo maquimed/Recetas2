@@ -1,14 +1,16 @@
 package tareasGIT;
 
+import java.util.ArrayList;
+
 public class Receta {
 	String nombre;
-	String ingredientes;
+	ArrayList<Ingrediente> ingredientes = new ArrayList<Ingrediente>();
 	String preparacion;
 	
 	public Receta() {
 		
 	}
-	public Receta(String nombre, String ingredientes, String preparacion) {
+	public Receta(String nombre, ArrayList<Ingrediente> ingredientes, String preparacion) {
 		this.nombre = nombre;
 		this.ingredientes = ingredientes;
 		this.preparacion = preparacion;
@@ -19,10 +21,10 @@ public class Receta {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getIngredientes() {
+	public ArrayList<Ingrediente> getIngredientes() {
 		return ingredientes;
 	}
-	public void setIngredientes(String ingredientes) {
+	public void setIngredientes(ArrayList<Ingrediente> ingredientes) {
 		this.ingredientes = ingredientes;
 	}
 	public String getPreparacion() {
