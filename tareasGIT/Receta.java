@@ -39,4 +39,7 @@ public class Receta {
 	public void addIngrediente(Ingrediente ingrediente) {
 		this.ingredientes.add(ingrediente);
 	}
+	public void addPreparacion(String preparacion) {
+		this.preparacion.add(preparacion);
+	}
 }
