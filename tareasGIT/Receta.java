@@ -36,5 +36,7 @@ public class Receta {
 	public void setPreparacion(ArrayList<String> preparacion) {
 		this.preparacion = preparacion;
 	}
-	
+	public void addIngrediente(Ingrediente ingrediente) {
+		this.ingredientes.add(ingrediente);
+	}
 }
