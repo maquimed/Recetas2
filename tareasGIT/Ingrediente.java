@@ -39,6 +39,15 @@ public class Ingrediente {
 		this.nombre = nombre;
 	}
 
-	
+	@Override
+	public String toString() {
+		return cantidad + " " + unidad + " de " + nombre;
+	}
+
+	public static void main(String[] args) {
+		Ingrediente	i = new	Ingrediente(3, "kg", "tomates");
+		System.out.println(i.toString());
+		
+	}
 	
 }
