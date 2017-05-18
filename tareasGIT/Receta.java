@@ -6,7 +6,7 @@ public class Receta {
 	String nombre;
 	ArrayList<Ingrediente> ingredientes = new ArrayList<Ingrediente>();
 	ArrayList<String> preparacion = new ArrayList<String>();
-
+	int hola;
 	
 	public Receta() {
 		
