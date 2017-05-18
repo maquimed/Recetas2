@@ -6,7 +6,6 @@ public class Receta {
 	String nombre;
 	ArrayList<Ingrediente> ingredientes = new ArrayList<Ingrediente>();
 	ArrayList<String> preparacion = new ArrayList<String>();
-	int hola;
 	
 	public Receta() {
 		
@@ -41,5 +40,36 @@ public class Receta {
 	}
 	public void addPreparacion(String preparacion) {
 		this.preparacion.add(preparacion);
+	}
+
+	public String listarIngredientes() {
+		String lista="";
+		for(Ingrediente i:ingredientes) {
+			lista+=i.toString()+"\n";
+		}
+		return lista;
+	}
+	public String listarPreparacion() {
+		String lista="";
+		for(int i=0; i<preparacion.size(); i++) {
+			int paso = i+1;
+			lista+="Paso "+ paso + " : " +preparacion.get(i)+"\n";
+		}
+		return lista;
+	}
+	@Override
+	public String toString() {
+		return "Receta: " + nombre.toUpperCase() + "\n\nIngredientes\n" + listarIngredientes() + "\nPreparacion\n" + listarPreparacion();
+	}
+	 public static void main(String[] args) {
+		Ingrediente i = new Ingrediente(3, "kg", "tomates");
+		Ingrediente i2 = new Ingrediente(3, "kg", "cigalas");
+		Receta r = new Receta();
+		r.setNombre("Cigalas con Tomate");
+		r.addIngrediente(i);
+		r.addIngrediente(i2);
+		r.addPreparacion("Pelar los tomates");
+		r.addPreparacion("Poner una olla con agua a hervir");
+		System.out.println(r.toString());
 	}
 }
